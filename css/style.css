@@ -1,0 +1,582 @@
+input,
+body,
+button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+*:focus {
+  outline: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  color: #000;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjZjFmNGY3Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2VjZWNlYyIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2VjZWNlYyIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg==");
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1 {
+  font-size: 64px;
+  font-weight: 300;
+  margin: 0;
+}
+button,
+p,
+.circuit2--s--,
+.coming-soon--s-- {
+  opacity: 0;
+  visibility: hidden;
+}
+button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  margin: 0 auto 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  transition: opacity 0.3s, box-shadow 0.3s, visibility 0.3s;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+button:hover {
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}
+p {
+  transition: opacity 0.3s;
+  margin: 0 0 20px 0;
+}
+.circuitScheme--s-- i {
+  position: absolute;
+  background: #000;
+}
+.circuit1-battery--s--:after,
+.circuit2-battery--s--:after {
+  content: '';
+  position: absolute;
+}
+.circuit1--s--,
+.circuit2--s-- {
+  position: absolute;
+  left: 50%;
+  transition: opacity 0.3s linear, visibility 0.3s;
+}
+.main--s-- {
+  width: 600px;
+  margin: 0 auto;
+  padding: 40px 0 0;
+}
+.circuit1--s-- {
+  width: 436px;
+  top: 150px;
+  margin-left: -218px;
+  opacity: 1;
+  visibility: visible;
+}
+.circuit1--s-- button {
+  float: right;
+}
+.circuit1-scheme--s-- {
+  width: 436px;
+  height: 297px;
+  margin-bottom: 40px;
+}
+i.circuit1-battery--s-- {
+  border-top: 4px solid #000;
+  top: 145px;
+  left: 0;
+  width: 80px;
+  height: 15px;
+  background: none;
+}
+i.circuit1-battery--s--:after {
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  border-bottom: 4px solid #000;
+}
+.circuit1-leftTop--s-- {
+  top: 45px;
+}
+.circuit1-leftBottom--s-- {
+  top: 164px;
+}
+.circuit1-leftTop--s--,
+.circuit1-leftBottom--s-- {
+  left: 39px;
+  height: 100px;
+  width: 4px;
+}
+.circuit1-bottomLeft--s-- {
+  left: 39px;
+}
+.circuit1-bottomRight--s-- {
+  left: 247px;
+}
+.circuit1-bottomRight--s--,
+.circuit1-bottomLeft--s-- {
+  height: 4px;
+  width: 150px;
+  top: 264px;
+}
+.circuit1-right--s-- {
+  top: 45px;
+  left: 393px;
+  height: 219px;
+  width: 4px;
+}
+.circuit1-topRight--s-- {
+  top: 43px;
+  left: 216px;
+  height: 4px;
+  width: 181px;
+}
+.circuit1-topLeft--s-- {
+  top: 43px;
+  left: 39px;
+  height: 4px;
+  width: 100px;
+}
+i.circuit1-switch--s-- {
+  top: 0px;
+  left: 133px;
+  width: 83px;
+  height: 53px;
+  background: none;
+}
+i.circuit1-switch--s--:before,
+i.circuit1-switch--s--:after {
+  content: '';
+  position: absolute;
+  transition: background 0.3s, transform 0.3s, border 0.3s;
+}
+i.circuit1-switch--s--:before {
+  top: 39px;
+  left: 0;
+  border: 6px solid #000;
+  border-radius: 50%;
+  transform: scale(1);
+}
+i.circuit1-switch--s--:after {
+  left: 8px;
+  top: 43px;
+  width: 71px;
+  border: 2px solid #000;
+  transform: rotate(-35deg);
+  transform-origin: top left;
+}
+i.circuit1-switch--s--:hover {
+  cursor: pointer;
+}
+i.circuit1-switch--s--:hover:before {
+  transform: scale(1.5);
+}
+i.circuit1-bulb--s-- {
+  top: 239px;
+  left: 189px;
+  background: #fff;
+}
+i.circuit1-bulb--s--:before {
+  transform: rotate(45deg);
+}
+i.circuit1-bulb--s--:after {
+  transform: rotate(135deg);
+}
+.circuit1-switchOn--s-- .circuit1-switch--s--:after {
+  transform: rotate(0deg);
+}
+.circuit1-switchOn--s-- .circuit1-switch--s--:hover:after {
+  border-style: solid;
+}
+.circuit1-switchOn--s-- .circuit1-bulb--s-- {
+  background: #ff0;
+  box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #ff0 0 2px 12px;
+}
+.circuit1-switchOn--s-- button,
+.circuit1-switchOn--s-- p {
+  opacity: 1;
+  visibility: visible;
+}
+.circuit2--s-- {
+  top: 150px;
+  margin-left: -262px;
+  width: 525px;
+}
+.circuit2--s-- button {
+  opacity: 0;
+  visibility: hidden;
+}
+.circuit2--s-- .circuit2-buttonBack--s-- {
+  float: left;
+  background: #fff;
+  color: #000;
+}
+.circuit2--s-- .circuit2-buttonNext--s-- {
+  float: right;
+}
+.circuit2-scheme--s-- {
+  width: 525px;
+  height: 350px;
+}
+i.circuit2-battery--s-- {
+  border-top: 4px solid #000;
+  top: 130px;
+  left: 0;
+  width: 80px;
+  height: 15px;
+  background: none;
+}
+i.circuit2-battery--s--:after {
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  border-bottom: 4px solid #000;
+}
+.circuit2-leftTop--s-- {
+  top: 0px;
+}
+.circuit2-leftBottom--s-- {
+  top: 149px;
+}
+.circuit2-leftTop--s--,
+.circuit2-leftBottom--s-- {
+  height: 130px;
+  width: 4px;
+  left: 39px;
+  left: 39px;
+}
+.circuit2-bottomLeft--s-- {
+  left: 39px;
+  width: 170px;
+}
+.circuit2-bottomRight--s-- {
+  left: 262px;
+  width: 206px;
+}
+.circuit2-bottomLeft--s--,
+.circuit2-bottomRight--s-- {
+  height: 4px;
+  top: 279px;
+}
+i.circuit2-bulbLeft--s-- {
+  top: 252px;
+  left: 207px;
+  background: #fff;
+}
+i.circuit2-bulbLeft--s--:before {
+  transform: rotate(45deg);
+}
+i.circuit2-bulbLeft--s--:after {
+  transform: rotate(135deg);
+}
+i.circuit2-bulbRight--s-- {
+  top: 252px;
+  left: 467px;
+  background: #ff0;
+  box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #ff0 0 2px 12px;
+}
+i.circuit2-bulbRight--s--:before {
+  transform: rotate(45deg);
+}
+i.circuit2-bulbRight--s--:after {
+  transform: rotate(135deg);
+}
+.circuit2-bulbLeft--s--,
+.circuit2-bulbRight--s--,
+.circuit1-bulb--s-- {
+  border: 4px solid #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: background 0.5s, box-shadow 0.5s;
+}
+.circuit2-bulbLeft--s--:before,
+.circuit2-bulbRight--s--:before,
+.circuit1-bulb--s--:before,
+.circuit2-bulbLeft--s--:after,
+.circuit2-bulbRight--s--:after,
+.circuit1-bulb--s--:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 23px;
+  height: 4px;
+  background: #000;
+}
+.circuit2-topLeft--s-- {
+  top: 0px;
+  left: 39px;
+  height: 4px;
+  width: 230px;
+}
+.circuit2-bulbLeftLine--s-- {
+  width: 4px;
+  height: 148px;
+  top: 104px;
+  left: 234px;
+}
+.circuit2-topBottom--s-- {
+  width: 4px;
+  height: 50px;
+  top: 0px;
+  left: 265px;
+}
+i.circuit2-doubleSwitchWrapper--s-- {
+  width: 101px;
+  height: 51px;
+  top: 46px;
+  left: 203px;
+  cursor: pointer;
+  background: none;
+}
+i.circuit2-doubleSwitchWrapper--s--:hover .circuit2-doubleSwitch--s--:before,
+i.circuit2-doubleSwitchWrapper--s--:hover .circuit2-doubleSwitch--s--:after {
+  transform: scale(1.4);
+}
+.circuit2-doubleSwitch--s-- {
+  width: 50px;
+  height: 4px;
+  top: 4px;
+  left: 39px;
+}
+.circuit2-doubleSwitch--s--:before,
+.circuit2-doubleSwitch--s--:after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  border: 6px solid #000;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: border 0.3s, transform 0.3s;
+}
+.circuit2-doubleSwitch--s--:before {
+  right: 100%;
+}
+.circuit2-doubleSwitch--s--:after {
+  left: 100%;
+}
+.circuit2-doubleSwitch-left--s--,
+.circuit2-doubleSwitch-right--s-- {
+  top: 0;
+  height: 50px;
+  border: 2px solid #000;
+  transform: rotate(35deg);
+  transform-origin: top left;
+  transition: background 0.3s, transform 0.3s, border 0.3s;
+}
+.circuit2-doubleSwitch-left--s-- {
+  left: -8px;
+}
+.circuit2-doubleSwitch-right--s-- {
+  right: -8px;
+}
+.circuit2-middle--s-- {
+  width: 4px;
+  height: 100px;
+  top: 94px;
+  left: 265px;
+}
+.circuit2-middleRight--s-- {
+  width: 4px;
+  height: 60px;
+  top: 104px;
+  left: 296px;
+}
+.circuit2-middleTop--s-- {
+  width: 79px;
+  height: 4px;
+  top: 161px;
+  left: 296px;
+}
+.circuit2-middleBottom--s-- {
+  width: 123px;
+  height: 4px;
+  top: 192px;
+  left: 265px;
+}
+i.circuit2-switch--s-- {
+  top: 157px;
+  left: 375px;
+  width: 60px;
+  height: 39px;
+  background: none;
+}
+i.circuit2-switch--s--:before,
+i.circuit2-switch--s--:after {
+  content: '';
+  position: absolute;
+  transition: background 0.3s, transform 0.3s, border 0.3s;
+}
+i.circuit2-switch--s--:before {
+  top: 0px;
+  left: 48px;
+  border: 6px solid #000;
+  border-radius: 50%;
+  transform: scale(1);
+}
+i.circuit2-switch--s--:after {
+  left: 0px;
+  top: 4px;
+  width: 50px;
+  border: 2px solid #000;
+  transform: rotate(-36deg);
+  transform-origin: top right;
+}
+i.circuit2-switch--s--:hover {
+  cursor: pointer;
+}
+i.circuit2-switch--s--:hover:before {
+  transform: scale(1.4);
+}
+.circuit2-right--s-- {
+  width: 4px;
+  height: 92px;
+  top: 161px;
+  left: 494px;
+}
+.circuit2-rightTop--s-- {
+  width: 64px;
+  height: 4px;
+  top: 161px;
+  left: 432px;
+}
+.circuit2-switch1-on--s-- .circuit2-doubleSwitch-left--s--,
+.circuit2-switch1-on--s-- .circuit2-doubleSwitch-right--s-- {
+  transform: rotate(0deg);
+}
+.circuit2-switch1-on--s-- .circuit2-bulbLeft--s-- {
+  background: #ff0;
+  box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #ff0 0 2px 12px;
+}
+.circuit2-switch1-on--s-- .circuit2-bulbRight--s-- {
+  background: #fff;
+  box-shadow: none;
+}
+.circuit2-switch2-on--s-- .circuit2-switch--s--:after {
+  transform: rotate(0deg);
+}
+.circuit2-switch2-on--s-- .circuit2-bulbRight--s-- {
+  background: #fff;
+  box-shadow: none;
+}
+.circuit2-open--s--.circuit2-switch2-on--s--.circuit2-switch1-on--s-- .circuit2-bulbRight--s-- {
+  background: #ff0;
+  box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #ff0 0 2px 12px;
+}
+.circuit2-open--s--.circuit2-switch2-on--s--.circuit2-switch1-on--s-- .circuit2-buttonNext--s-- {
+  opacity: 1;
+  visibility: visible;
+}
+.circuit2-open--s-- .circuit1--s-- {
+  opacity: 0;
+  visibility: hidden;
+}
+.circuit2-open--s-- .circuit1-button--s-- {
+  opacity: 0;
+  visibility: hidden;
+}
+.circuit2-open--s-- .circuit2--s-- {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+.circuit2-open--s-- .circuit2--s-- .circuit2-buttonBack--s-- {
+  opacity: 1;
+  visibility: visible;
+}
+.buttons--s--:before,
+.buttons--s--:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.coming-soon--s-- {
+  padding-top: 60px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+h2 {
+  font-weight: 300;
+  font-size: 30px;
+}
+h2 button {
+  display: block;
+  margin: 0 auto 10px;
+}
+input {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 28px;
+  height: 40px;
+  padding: 6px 15px;
+  border: 1px sold #ccc;
+  width: 450px;
+  font-weight: normal;
+}
+input::-moz-placeholder {
+  color: #909090;
+  transition: opacity 0.3s, color 0.3s;
+}
+input::-webkit-input-placeholder {
+  color: #909090;
+  transition: opacity 0.3s, color 0.3s;
+}
+input:focus::-moz-placeholder {
+  color: #dbdbdb;
+  transition: opacity 0.3s, color 0.3s;
+}
+input:focus::-webkit-input-placeholder {
+  color: #dbdbdb;
+  transition: opacity 0.3s, color 0.3s;
+}
+input p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+}
+.coming-soon-start--s-- {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 40px;
+}
+.coming-soon-start--s-- a {
+  color: #000;
+  transition: color 0.3s;
+}
+.coming-soon-start--s-- a:hover {
+  color: #4caf50;
+}
+.coming-soon-page--s-- .coming-soon--s-- {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+.coming-soon-page--s-- .coming-soon--s-- p {
+  opacity: 1;
+  visibility: visible;
+}
+.coming-soon-page--s-- .coming-soon--s-- button {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 10px;
+}
+.coming-soon-page--s-- .circuit1--s-- {
+  display: none;
+}
+.coming-soon-message--s-- {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #cc0228;
+}
+.coming-soon-messageCorrect--s-- {
+  color: #4caf50;
+}

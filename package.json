@@ -1,0 +1,22 @@
+{
+  "name": "start-project",
+  "version": "1.0.0",
+  "description": "Startovaci projekt pro tvorbu novych webu spolecnosti Master internet",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-clean-css": "",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-minify-cssnames": "^2.0.0",
+    "gulp-php-minify": "^0.1.2",
+    "gulp-stylus": "^2.1.0",
+    "pump": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

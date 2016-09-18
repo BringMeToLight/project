@@ -1,0 +1,1 @@
+function hasC(e,n){return(" "+e.className+" ").indexOf(" "+n+" ")>-1}function toggle(e,n){var t=document.getElementById(e);hasC(t,n)?t.classList.remove(n):t.classList.add(n)}function changeCl(e,n){document.getElementById(e).className=n}
