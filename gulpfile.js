@@ -42,7 +42,7 @@ gulp.task('minify-php', () => gulp.src('temp/minified-php/index.php', {read: fal
 
 // Minify html in php file 
 gulp.task('minify-html', function() {
-  return gulp.src('build/index.php')
+  return gulp.src('temp/index.php')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('temp/minified-php'))
 });
@@ -65,4 +65,10 @@ gulp.task('cssmin', function() {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('default', ['stylus', 'watch', 'minify-css-names', 'minify-php', 'jsmin', 'cssmin', 'minify-html', 'copy-img']);
+gulp.task('default', ['stylus', 'watch', 'minify-css-names', 'minify-html', 'minify-php', 'jsmin', 'cssmin', 'copy-img']);
+
+
+
+
+
+

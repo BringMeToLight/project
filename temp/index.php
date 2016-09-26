@@ -1,17 +1,10 @@
 <?php
-$email = '';
 $outputMsg = '';
 $class = '';
 $classMessage = '';
 
-function check_email($email) {
-    $atom = '[-a-z0-9!#$%&\'*+/=?^_`{|}~]';
-    $domain = '[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])';
-    return eregi("^$atom+(\\.$atom+)*@($domain?\\.)+$domain\$", $email);
-}
-
 if( $_SERVER["REQUEST_METHOD"] == "POST" ){
-	if( !empty($_POST['email']) && empty($_POST['hidden']) && check_email($_POST['email']) ){
+	if( !empty($_POST['email']) && empty($_POST['hidden']) ){
 		$email = filter_var( $_POST["email"], FILTER_SANITIZE_EMAIL );
 		mail('notifyme@bringmetolight.com', 'Bring me to light: new subscriber', 'New subscriber: '.$email);
 		$outputMsg = 'Your email has been successfully sent :)';
@@ -31,7 +24,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 		<meta name="keywords" content="Plug in circuit, Bring me to light" />
 		<meta name="description" content="Help to box give a light!" />
 		<title>Bring me to light</title>
-		<link rel="stylesheet" href="style.css?v=1.1" media="screen, projection" />
+		<link rel="stylesheet" href="css/style.css?v=1.1" media="screen, projection" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<meta name="viewport" content="width=600">
 	</head>
@@ -46,12 +39,12 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 					<i class="a3"></i>
 					<i class="a9"></i>
 					<i class="aa"></i>
-					<i class="ag"></i>
+					<i class="ah"></i>
 					<i class="ab"></i>
 					<i class="ac"></i>
 					<i class="ad"></i>
 					<i class="af" id="af"
-						onclick="toggle('a6','ah')">
+						onclick="toggle('a6','ag')">
 					</i>
 					<i class="ae"></i>
 				</div>
@@ -107,7 +100,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 				<h2>Next levels, coming soon...</h2>
 				<p>Do you wish to know when the next level  will be released? Give us your email:</p>
 				<form method="post" action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>">
-					<input type="email" name="email" placeholder="example@domain.com">
+					<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="example@domain.com">
 					<input type="hidden" name="hidden">
 					<?php if($outputMsg){echo '<p class="aM '. $classMessage.'">'.$outputMsg.'</p>';}?>
 					<button type="submit" value="Submit">Notify me</button>
@@ -117,6 +110,6 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 
 		</div>
 
-		<script src="app.js?v=1.1" type="text/javascript"></script>
+		<script src="js/app.js?v=1.1" type="text/javascript"></script>
 	</body>
 </html>

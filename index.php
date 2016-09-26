@@ -1,17 +1,10 @@
 <?php
-$email = '';
 $outputMsg = '';
 $class = '';
 $classMessage = '';
 
-function check_email($email) {
-    $atom = '[-a-z0-9!#$%&\'*+/=?^_`{|}~]';
-    $domain = '[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])';
-    return eregi("^$atom+(\\.$atom+)*@($domain?\\.)+$domain\$", $email);
-}
-
 if( $_SERVER["REQUEST_METHOD"] == "POST" ){
-	if( !empty($_POST['email']) && empty($_POST['hidden']) && check_email($_POST['email']) ){
+	if( !empty($_POST['email']) && empty($_POST['hidden']) ){
 		$email = filter_var( $_POST["email"], FILTER_SANITIZE_EMAIL );
 		mail('notifyme@bringmetolight.com', 'Bring me to light: new subscriber', 'New subscriber: '.$email);
 		$outputMsg = 'Your email has been successfully sent :)';
@@ -107,7 +100,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 				<h2>Next levels, coming soon...</h2>
 				<p>Do you wish to know when the next level  will be released? Give us your email:</p>
 				<form method="post" action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>">
-					<input type="email" name="email" placeholder="example@domain.com">
+					<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="example@domain.com">
 					<input type="hidden" name="hidden">
 					<?php if($outputMsg){echo '<p class="coming-soon-message--s-- '. $classMessage.'">'.$outputMsg.'</p>';}?>
 					<button type="submit" value="Submit">Notify me</button>
