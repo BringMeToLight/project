@@ -7,12 +7,6 @@ var gulp = require('gulp'),
     phpMinify = require('gulp-php-minify'),
     htmlmin = require('gulp-htmlmin');
 
-// Copy favicon
-gulp.task('copy-img', function() {
-   gulp.src('./img/favicon.ico')
-   .pipe(gulp.dest('build'));
-});
-
 // Stylus
 gulp.task('stylus', function () {
   gulp.src('./css/styl/style.styl')
@@ -34,18 +28,18 @@ gulp.task('minify-css-names', function() {
         .pipe(gulp.dest('temp'))
 });
 
-// Minify php code
-gulp.task('minify-php', () => gulp.src('temp/minified-php/index.php', {read: false})
-  .pipe(phpMinify())
-  .pipe(gulp.dest('build'))
-);
-
 // Minify html in php file 
 gulp.task('minify-html', function() {
   return gulp.src('temp/index.php')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('temp/minified-php'))
 });
+
+// Minify php code
+gulp.task('minify-php', () => gulp.src('temp/minified-php/index.php', {read: false})
+  .pipe(phpMinify())
+  .pipe(gulp.dest('build'))
+);
 
 // Minify js 
 gulp.task('jsmin', function (cb) {
@@ -65,10 +59,10 @@ gulp.task('cssmin', function() {
     .pipe(gulp.dest('build'));
 });
 
+// Copy favicon
+gulp.task('copy-img', function() {
+   gulp.src('./img/favicon.ico')
+   .pipe(gulp.dest('build'));
+});
+
 gulp.task('default', ['stylus', 'watch', 'minify-css-names', 'minify-html', 'minify-php', 'jsmin', 'cssmin', 'copy-img']);
-
-
-
-
-
-
