@@ -24,7 +24,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 		<meta name="keywords" content="Plug in circuit, Bring me to light" />
 		<meta name="description" content="Help to box give a light!" />
 		<title>Bring me to light</title>
-		<link rel="stylesheet" href="css/style.css?v=1.1" media="screen, projection" />
+		<link rel="stylesheet" href="style.css?v=1.1" media="screen, projection" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<meta name="viewport" content="width=600">
 	</head>
@@ -110,6 +110,6 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 
 		</div>
 
-		<script src="js/app.js?v=1.1" type="text/javascript"></script>
+		<script src="app.js?v=1.1" type="text/javascript"></script>
 	</body>
 </html>
