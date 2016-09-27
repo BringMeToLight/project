@@ -11,4 +11,9 @@ We have successfully built two levels of this app to 10kB and then we fell in lo
 
 So let's try it!
 
+###Files to deploy on server:
+```
+/build
+```
+
 ###Website: http://bringmetolight.com/
