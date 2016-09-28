@@ -21,7 +21,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 	<head>
 		<meta charset="utf-8" />
 		<meta name="author" content="bringmetolight.com" />
-		<meta name="keywords" content="Plug in circuit, Bring me to light" />
+		<meta name="keywords" content="Bring me to light" />
 		<meta name="description" content="Help to box give a light!" />
 		<title>Bring me to light</title>
 		<link rel="stylesheet" href="style.css?v=1.1" media="screen, projection" />
@@ -43,9 +43,10 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 					<i class="circuit1-bottomRight--s--"></i>
 					<i class="circuit1-right--s--"></i>
 					<i class="circuit1-topRight--s--"></i>
-					<i class="circuit1-switch--s--" id="circuit1-switch--s--"
-						onclick="toggle('main--s--','circuit1-switchOn--s--')">
-					</i>
+					<a href="#" class="circuit1-switch--s-- circuit-switch--s--" id="circuit1-switch--s--"
+						onclick="toggle('main--s--','circuit1-switchOn--s--')"
+						onmouseout="blur()">
+					</a>
 					<i class="circuit1-topLeft--s--"></i>
 				</div>
 				<div class="buttons--s--">
@@ -67,19 +68,20 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 					<i class="circuit2-topLeft--s--"></i>
 					<i class="circuit2-bulbLeftLine--s--"></i>
 					<i class="circuit2-topBottom--s--"></i>
-					<i class="circuit2-doubleSwitchWrapper--s--" id="circuit2-switchLeft--s--"
-					  onclick="toggle('main--s--','circuit2-switch1-on--s--')">
+					<a href="#" class="circuit2-doubleSwitchWrapper--s--" id="circuit2-switchLeft--s--"
+					  onclick="toggle('main--s--','circuit2-switch1-on--s--')"onmouseout="blur()">
 						<i class="circuit2-doubleSwitch--s--">
 							<i class="circuit2-doubleSwitch-left--s--"></i>
 							<i class="circuit2-doubleSwitch-right--s--"></i>
 						</i>
-					</i>
+					</a>
 					<i class="circuit2-middle--s--"></i>
 					<i class="circuit2-middleRight--s--"></i>
 					<i class="circuit2-middleTop--s--"></i>
 					<i class="circuit2-middleBottom--s--"></i>
-					<i class="circuit2-switch--s--" id="circuit2-switchRight--s--"
-					  onclick="toggle('main--s--','circuit2-switch2-on--s--')"></i>
+					<a href="#" class="circuit2-switch--s-- circuit-switch--s--" id="circuit2-switchRight--s--"
+					  onclick="toggle('main--s--','circuit2-switch2-on--s--')"onmouseout="blur()">
+					</a>
 					<i class="circuit2-right--s--"></i>
 					<i class="circuit2-rightTop--s--"></i>
 				</div>
