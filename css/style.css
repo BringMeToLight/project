@@ -46,13 +46,15 @@ button {
   transition: opacity 0.3s, box-shadow 0.3s, visibility 0.3s;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
-button:hover {
+button:hover,
+button:focus {
   box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
 p {
   transition: opacity 0.3s;
   margin: 0 0 20px 0;
 }
+.circuitScheme--s-- a,
 .circuitScheme--s-- i {
   position: absolute;
   background: #000;
@@ -144,42 +146,39 @@ i.circuit1-battery--s--:after {
   height: 4px;
   width: 100px;
 }
+a.circuit1-switch--s--,
 i.circuit1-switch--s-- {
   top: 0px;
   left: 133px;
   width: 83px;
   height: 53px;
   background: none;
+  z-index: 10;
 }
-i.circuit1-switch--s--:before,
-i.circuit1-switch--s--:after {
-  content: '';
-  position: absolute;
-  transition: background 0.3s, transform 0.3s, border 0.3s;
-}
+a.circuit1-switch--s--:before,
 i.circuit1-switch--s--:before {
   top: 39px;
   left: 0;
-  border: 6px solid #000;
-  border-radius: 50%;
-  transform: scale(1);
   animation: leaves 0.8s ease-in-out infinite alternate;
 }
+.circuit1-switchOn--s-- a.circuit1-switch--s--:before,
 .circuit1-switchOn--s-- i.circuit1-switch--s--:before {
   animation: none;
   transform: scale(1);
 }
+a.circuit1-switch--s--:after,
 i.circuit1-switch--s--:after {
   left: 8px;
   top: 43px;
   width: 71px;
-  border: 2px solid #000;
   transform: rotate(-35deg);
   transform-origin: top left;
 }
+a.circuit1-switch--s--:hover,
 i.circuit1-switch--s--:hover {
   cursor: pointer;
 }
+a.circuit1-switch--s--:hover:before,
 i.circuit1-switch--s--:hover:before {
   transform: scale(1.5);
 }
@@ -334,6 +333,7 @@ i.circuit2-bulbRight--s--:after {
   top: 0px;
   left: 265px;
 }
+a.circuit2-doubleSwitchWrapper--s--,
 i.circuit2-doubleSwitchWrapper--s-- {
   width: 101px;
   height: 51px;
@@ -342,15 +342,34 @@ i.circuit2-doubleSwitchWrapper--s-- {
   cursor: pointer;
   background: none;
 }
+a.circuit2-doubleSwitchWrapper--s--:hover .circuit2-doubleSwitch--s--:before,
 i.circuit2-doubleSwitchWrapper--s--:hover .circuit2-doubleSwitch--s--:before,
+a.circuit2-doubleSwitchWrapper--s--:hover .circuit2-doubleSwitch--s--:after,
 i.circuit2-doubleSwitchWrapper--s--:hover .circuit2-doubleSwitch--s--:after {
   transform: scale(1.4);
+}
+a.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch--s--,
+i.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch--s-- {
+  background: #4caf50;
+}
+a.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch--s--:before,
+i.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch--s--:before,
+a.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch--s--:after,
+i.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch--s--:after {
+  border-color: #4caf50;
+}
+a.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch-left--s--,
+i.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch-left--s--,
+a.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch-right--s--,
+i.circuit2-doubleSwitchWrapper--s--:focus .circuit2-doubleSwitch-right--s-- {
+  border-color: #4caf50;
 }
 .circuit2-doubleSwitch--s-- {
   width: 50px;
   height: 4px;
   top: 4px;
   left: 39px;
+  transition: background 0.3s;
 }
 .circuit2-doubleSwitch--s--:before,
 .circuit2-doubleSwitch--s--:after {
@@ -407,37 +426,51 @@ i.circuit2-doubleSwitchWrapper--s--:hover .circuit2-doubleSwitch--s--:after {
   top: 192px;
   left: 265px;
 }
+.circuit-switch--s--:before,
+.circuit-switch--s--:after {
+  content: '';
+  position: absolute;
+  transition: background 0.3s, transform 0.3s, border 0.3s;
+}
+.circuit-switch--s--:before {
+  border: 6px solid #000;
+  border-radius: 50%;
+  transform: scale(1);
+}
+.circuit-switch--s--:after {
+  border: 2px solid #000;
+  transform-origin: top right;
+}
+.circuit-switch--s--:focus:before,
+.circuit-switch--s--:focus:after {
+  border-color: #4caf50;
+}
+a.circuit2-switch--s--,
 i.circuit2-switch--s-- {
   top: 157px;
   left: 375px;
   width: 60px;
   height: 39px;
   background: none;
+  z-index: 10;
 }
-i.circuit2-switch--s--:before,
-i.circuit2-switch--s--:after {
-  content: '';
-  position: absolute;
-  transition: background 0.3s, transform 0.3s, border 0.3s;
-}
+a.circuit2-switch--s--:before,
 i.circuit2-switch--s--:before {
   top: 0px;
   left: 48px;
-  border: 6px solid #000;
-  border-radius: 50%;
-  transform: scale(1);
 }
+a.circuit2-switch--s--:after,
 i.circuit2-switch--s--:after {
   left: 0px;
   top: 4px;
   width: 50px;
-  border: 2px solid #000;
   transform: rotate(-36deg);
-  transform-origin: top right;
 }
+a.circuit2-switch--s--:hover,
 i.circuit2-switch--s--:hover {
   cursor: pointer;
 }
+a.circuit2-switch--s--:hover:before,
 i.circuit2-switch--s--:hover:before {
   transform: scale(1.4);
 }
@@ -480,10 +513,7 @@ i.circuit2-switch--s--:hover:before {
   opacity: 1;
   visibility: visible;
 }
-.circuit2-open--s-- .circuit1--s-- {
-  opacity: 0;
-  visibility: hidden;
-}
+.circuit2-open--s-- .circuit1--s--,
 .circuit2-open--s-- .circuit1-button--s-- {
   opacity: 0;
   visibility: hidden;
@@ -511,10 +541,6 @@ h2 {
   font-weight: 300;
   font-size: 30px;
 }
-h2 button {
-  display: block;
-  margin: 0 auto 10px;
-}
 input {
   margin-bottom: 20px;
   font-size: 20px;
@@ -524,27 +550,6 @@ input {
   border: 1px sold #ccc;
   width: 450px;
   font-weight: normal;
-}
-input::-moz-placeholder {
-  color: #909090;
-  transition: opacity 0.3s, color 0.3s;
-}
-input::-webkit-input-placeholder {
-  color: #909090;
-  transition: opacity 0.3s, color 0.3s;
-}
-input:focus::-moz-placeholder {
-  color: #dbdbdb;
-  transition: opacity 0.3s, color 0.3s;
-}
-input:focus::-webkit-input-placeholder {
-  color: #dbdbdb;
-  transition: opacity 0.3s, color 0.3s;
-}
-input p {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 300;
 }
 .coming-soon-start--s-- {
   font-size: 14px;
@@ -563,13 +568,12 @@ input p {
   visibility: visible;
   transition-delay: 0.3s;
 }
-.coming-soon-page--s-- .coming-soon--s-- p {
+.coming-soon-page--s-- .coming-soon--s-- p,
+.coming-soon-page--s-- .coming-soon--s-- button {
   opacity: 1;
   visibility: visible;
 }
 .coming-soon-page--s-- .coming-soon--s-- button {
-  opacity: 1;
-  visibility: visible;
   margin-bottom: 10px;
 }
 .coming-soon-page--s-- .circuit1--s-- {

@@ -8,11 +8,11 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 		$email = filter_var( $_POST["email"], FILTER_SANITIZE_EMAIL );
 		mail('notifyme@bringmetolight.com', 'Bring me to light: new subscriber', 'New subscriber: '.$email);
 		$outputMsg = 'Your email has been successfully sent :)';
-		$class = 'aL';
-        $classMessage = 'aN';
+		$class = 'aM';
+        $classMessage = 'aO';
 	} else {
 		$outputMsg = 'Your email is not correct! Please fix that :)';
-		$class = 'aL';
+		$class = 'aM';
 	}
 }
 ?>
@@ -21,7 +21,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 	<head>
 		<meta charset="utf-8" />
 		<meta name="author" content="bringmetolight.com" />
-		<meta name="keywords" content="Plug in circuit, Bring me to light" />
+		<meta name="keywords" content="Bring me to light" />
 		<meta name="description" content="Help to box give a light!" />
 		<title>Bring me to light</title>
 		<link rel="stylesheet" href="style.css?v=1.1" media="screen, projection" />
@@ -43,13 +43,14 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 					<i class="ab"></i>
 					<i class="ac"></i>
 					<i class="ad"></i>
-					<i class="af" id="af"
-						onclick="toggle('a6','ag')">
-					</i>
+					<a href="#" class="af aC" id="af"
+						onclick="toggle('a6','ag')"
+						onmouseout="blur()">
+					</a>
 					<i class="ae"></i>
 				</div>
-				<div class="aJ">
-					<button type="button" class="aI" id="aI" onclick="toggle('a6','aH')">
+				<div class="aK">
+					<button type="button" class="aJ" id="aJ" onclick="toggle('a6','aI')">
 						Next round
 					</button>
 				</div>
@@ -67,30 +68,31 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 					<i class="ar"></i>
 					<i class="as"></i>
 					<i class="at"></i>
-					<i class="au" id="aO"
-					  onclick="toggle('a6','aF')">
+					<a href="#" class="au" id="aP"
+					  onclick="toggle('a6','aG')"onmouseout="blur()">
 						<i class="av">
 							<i class="aw"></i>
 							<i class="ax"></i>
 						</i>
-					</i>
+					</a>
 					<i class="ay"></i>
 					<i class="az"></i>
 					<i class="aA"></i>
 					<i class="aB"></i>
-					<i class="aC" id="aP"
-					  onclick="toggle('a6','aG')"></i>
-					<i class="aD"></i>
+					<a href="#" class="aD aC" id="aQ"
+					  onclick="toggle('a6','aH')"onmouseout="blur()">
+					</a>
 					<i class="aE"></i>
+					<i class="aF"></i>
 				</div>
-				<div class="aJ">
+				<div class="aK">
 					<button type="button" class="ai"
 						id="ai"
-						onclick="toggle('a6','aH')">
+						onclick="toggle('a6','aI')">
 						Prev round
 					</button>
 					<button type="button" class="aj"
-						id="aj" onclick="changeCl('a6','a6 aF aG aL')">
+						id="aj" onclick="changeCl('a6','a6 aG aH aM')">
 						Next round
 					</button>
 				</div>
@@ -102,10 +104,10 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 				<form method="post" action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>">
 					<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="example@domain.com">
 					<input type="hidden" name="hidden">
-					<?php if($outputMsg){echo '<p class="aM '. $classMessage.'">'.$outputMsg.'</p>';}?>
+					<?php if($outputMsg){echo '<p class="aN '. $classMessage.'">'.$outputMsg.'</p>';}?>
 					<button type="submit" value="Submit">Notify me</button>
 				</form>
-				<p class="aK"><a href="./">Back to start</a></p>
+				<p class="aL"><a href="./">Back to start</a></p>
 			</div>
 
 		</div>

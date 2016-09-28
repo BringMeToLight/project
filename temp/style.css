@@ -46,13 +46,15 @@ button {
   transition: opacity 0.3s, box-shadow 0.3s, visibility 0.3s;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
-button:hover {
+button:hover,
+button:focus {
   box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
 p {
   transition: opacity 0.3s;
   margin: 0 0 20px 0;
 }
+.a2 a,
 .a2 i {
   position: absolute;
   background: #000;
@@ -144,42 +146,39 @@ i.a3:after {
   height: 4px;
   width: 100px;
 }
+a.af,
 i.af {
   top: 0px;
   left: 133px;
   width: 83px;
   height: 53px;
   background: none;
+  z-index: 10;
 }
-i.af:before,
-i.af:after {
-  content: '';
-  position: absolute;
-  transition: background 0.3s, transform 0.3s, border 0.3s;
-}
+a.af:before,
 i.af:before {
   top: 39px;
   left: 0;
-  border: 6px solid #000;
-  border-radius: 50%;
-  transform: scale(1);
   animation: leaves 0.8s ease-in-out infinite alternate;
 }
+.ag a.af:before,
 .ag i.af:before {
   animation: none;
   transform: scale(1);
 }
+a.af:after,
 i.af:after {
   left: 8px;
   top: 43px;
   width: 71px;
-  border: 2px solid #000;
   transform: rotate(-35deg);
   transform-origin: top left;
 }
+a.af:hover,
 i.af:hover {
   cursor: pointer;
 }
+a.af:hover:before,
 i.af:hover:before {
   transform: scale(1.5);
 }
@@ -334,6 +333,7 @@ i.aq:after {
   top: 0px;
   left: 265px;
 }
+a.au,
 i.au {
   width: 101px;
   height: 51px;
@@ -342,15 +342,34 @@ i.au {
   cursor: pointer;
   background: none;
 }
+a.au:hover .av:before,
 i.au:hover .av:before,
+a.au:hover .av:after,
 i.au:hover .av:after {
   transform: scale(1.4);
+}
+a.au:focus .av,
+i.au:focus .av {
+  background: #4caf50;
+}
+a.au:focus .av:before,
+i.au:focus .av:before,
+a.au:focus .av:after,
+i.au:focus .av:after {
+  border-color: #4caf50;
+}
+a.au:focus .aw,
+i.au:focus .aw,
+a.au:focus .ax,
+i.au:focus .ax {
+  border-color: #4caf50;
 }
 .av {
   width: 50px;
   height: 4px;
   top: 4px;
   left: 39px;
+  transition: background 0.3s;
 }
 .av:before,
 .av:after {
@@ -407,98 +426,109 @@ i.au:hover .av:after {
   top: 192px;
   left: 265px;
 }
-i.aC {
+.aC:before,
+.aC:after {
+  content: '';
+  position: absolute;
+  transition: background 0.3s, transform 0.3s, border 0.3s;
+}
+.aC:before {
+  border: 6px solid #000;
+  border-radius: 50%;
+  transform: scale(1);
+}
+.aC:after {
+  border: 2px solid #000;
+  transform-origin: top right;
+}
+.aC:focus:before,
+.aC:focus:after {
+  border-color: #4caf50;
+}
+a.aD,
+i.aD {
   top: 157px;
   left: 375px;
   width: 60px;
   height: 39px;
   background: none;
+  z-index: 10;
 }
-i.aC:before,
-i.aC:after {
-  content: '';
-  position: absolute;
-  transition: background 0.3s, transform 0.3s, border 0.3s;
-}
-i.aC:before {
+a.aD:before,
+i.aD:before {
   top: 0px;
   left: 48px;
-  border: 6px solid #000;
-  border-radius: 50%;
-  transform: scale(1);
 }
-i.aC:after {
+a.aD:after,
+i.aD:after {
   left: 0px;
   top: 4px;
   width: 50px;
-  border: 2px solid #000;
   transform: rotate(-36deg);
-  transform-origin: top right;
 }
-i.aC:hover {
+a.aD:hover,
+i.aD:hover {
   cursor: pointer;
 }
-i.aC:hover:before {
+a.aD:hover:before,
+i.aD:hover:before {
   transform: scale(1.4);
 }
-.aD {
+.aE {
   width: 4px;
   height: 92px;
   top: 161px;
   left: 494px;
 }
-.aE {
+.aF {
   width: 64px;
   height: 4px;
   top: 161px;
   left: 432px;
 }
-.aF .aw,
-.aF .ax {
+.aG .aw,
+.aG .ax {
   transform: rotate(0deg);
 }
-.aF .ap {
+.aG .ap {
   background: #ff0;
   box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #ff0 0 2px 12px;
-}
-.aF .aq {
-  background: #fff;
-  box-shadow: none;
-}
-.aG .aC:after {
-  transform: rotate(0deg);
 }
 .aG .aq {
   background: #fff;
   box-shadow: none;
 }
-.aH.aG.aF .aq {
+.aH .aD:after {
+  transform: rotate(0deg);
+}
+.aH .aq {
+  background: #fff;
+  box-shadow: none;
+}
+.aI.aH.aG .aq {
   background: #ff0;
   box-shadow: rgba(0,0,0,0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #ff0 0 2px 12px;
 }
-.aH.aG.aF .aj {
+.aI.aH.aG .aj {
   opacity: 1;
   visibility: visible;
 }
-.aH .a5 {
+.aI .a5,
+.aI .aJ {
   opacity: 0;
   visibility: hidden;
 }
-.aH .aI {
-  opacity: 0;
-  visibility: hidden;
-}
-.aH .a0 {
+.aI .a0 {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.3s;
 }
-.aH .a0 .ai {
+.aI .a0 .ai {
   opacity: 1;
   visibility: visible;
 }
-.aJ:before,
-.aJ:after {
+.aK:before,
+.aK:after {
   content: '';
   display: table;
   clear: both;
@@ -511,10 +541,6 @@ h2 {
   font-weight: 300;
   font-size: 30px;
 }
-h2 button {
-  display: block;
-  margin: 0 auto 10px;
-}
 input {
   margin-bottom: 20px;
   font-size: 20px;
@@ -525,64 +551,42 @@ input {
   width: 450px;
   font-weight: normal;
 }
-input::-moz-placeholder {
-  color: #909090;
-  transition: opacity 0.3s, color 0.3s;
-}
-input::-webkit-input-placeholder {
-  color: #909090;
-  transition: opacity 0.3s, color 0.3s;
-}
-input:focus::-moz-placeholder {
-  color: #dbdbdb;
-  transition: opacity 0.3s, color 0.3s;
-}
-input:focus::-webkit-input-placeholder {
-  color: #dbdbdb;
-  transition: opacity 0.3s, color 0.3s;
-}
-input p {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 300;
-}
-.aK {
+.aL {
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 40px;
 }
-.aK a {
+.aL a {
   color: #000;
   transition: color 0.3s;
 }
-.aK a:hover {
+.aL a:hover {
   color: #4caf50;
 }
-.aL .a1 {
+.aM .a1 {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.3s;
 }
-.aL .a1 p {
+.aM .a1 p,
+.aM .a1 button {
   opacity: 1;
   visibility: visible;
 }
-.aL .a1 button {
-  opacity: 1;
-  visibility: visible;
+.aM .a1 button {
   margin-bottom: 10px;
 }
-.aL .a5 {
+.aM .a5 {
   display: none;
 }
-.aM {
+.aN {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #cc0228;
 }
-.aN {
+.aO {
   color: #4caf50;
 }
 @-moz-keyframes leaves {
